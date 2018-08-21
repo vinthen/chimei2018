@@ -1,0 +1,47 @@
+{
+  "Europe": {
+    "name": ["Europe", "歐洲"],
+    "country": {
+      "Belgium": {
+        "name": ["Belgium", "比利時"],
+        "city": {
+          "Brussels": {
+            "name": ["Brussels", "布魯塞爾 "],
+            "description": "<p>布魯塞爾 (Brussels) 是比利時的首都。</p><p>十三世紀開始，布魯塞爾逐漸發展成紡織業製造中心。</p>"
+          }
+        }
+      },
+      "Czech": {
+        "name": ["Czech", "捷克"],
+        "city": {
+          "Prague": {
+            "name": ["Prague", "布拉格"],
+            "description": "<p>布拉格 (捷克語：Praha) 是捷克共和國 (Czech Republic) 的首都和最大城市。</p><p>布拉格也是歐洲的文化重鎮之一。</p>"
+          }
+        }
+      },
+      "Italy": {
+        "name": ["Italy", "義大利"],
+        "city": {
+
+        }
+      }
+    }
+  },
+
+  "Africa": {
+    "name": ["Africa", "非洲"]
+  },
+
+  "Asia": {
+    "name": ["Asia", "亞洲"]
+  },
+
+  "Oceania": {
+    "name": ["Oceania", "大洋洲"]
+  },
+
+  "America": {
+    "name": ["America", "美洲"]
+  }
+}
