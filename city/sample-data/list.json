@@ -1,13 +1,67 @@
 {
-    "continent": [
-        "Europe","Africa","Asia","Oceania","America"
+  "continent": [
+    ["Europe", "歐洲"],
+    ["Africa", "非洲"],
+    ["Asia", "亞洲"],
+    ["Oceania", "大洋洲"],
+    ["America", "美洲"]
+  ],
+
+  "country": {
+    "Europe": [
+      ["Belgium", "比利時"],
+      ["Czech", "捷克"],
+      ["Denmark", "丹麥"],
+      ["England", "英格蘭"],
+      ["France", "法國"],
+      ["Germany", "德奧"],
+      ["Ireland", "愛爾蘭"],
+      ["Italy", "義大利"],
+      ["Netherlands", "荷蘭"],
+      ["Poland", "波蘭"],
+      ["Scotland", "蘇格蘭"],
+      ["Spain", "西班牙"],
+      ["Sweden", "瑞典"],
+      ["Switzerland", "瑞士"],
+      ["Ukraine", "烏克蘭"]
     ],
 
-    "country": [
-
-    ],
-
-    "city": [
-        
+    "Africa": [["Egypt", "埃及"]],
+    "Asia": [["China", "中國"], ["Japan", "日本"], ["Taiwan", "台灣"]],
+    "Oceania": [["Australia", "澳洲"]],
+    "America": [
+      ["Argentina", "阿根廷"],
+      ["Mexico", "墨西哥"],
+      ["United States", "美國"]
     ]
+  },
+
+  "city": {
+    "Belgium": [["Brussels", "布魯塞爾"]],
+    "Czech": [["Prague", "布拉格"]],
+    "Denmark": [["Copenhagen", "哥本哈根"]],
+    "England": [["London", "倫敦"]],
+    "France": [["Mirecourt", "密爾古"], ["Nice", "尼斯"], ["Paris", "巴黎"]],
+    "Germany": [
+      ["xxxxxx", "xxxxxx"],
+      ["xxxxxx", "xxxxxx"],
+      ["xxxxxx", "xxxxxx"],
+      ["xxxxxx", "xxxxxx"],
+      ["xxxxxx", "xxxxxx"],
+      ["xxxxxx", "xxxxxx"],
+      ["xxxxxx", "xxxxxx"],
+      ["xxxxxx", "xxxxxx"],
+      ["xxxxxx", "xxxxxx"],
+      ["xxxxxx", "xxxxxx"]
+    ],
+    "Ireland": [["xxxxxx", "xxxxxx"]],
+    "Italy": [["xxxxxx", "xxxxxx"]],
+    "Netherlands": [["xxxxxx", "xxxxxx"]],
+    "Poland": [["xxxxxx", "xxxxxx"]],
+    "Scotland": [["xxxxxx", "xxxxxx"]],
+    "Spain": [["xxxxxx", "xxxxxx"]],
+    "Sweden": [["xxxxxx", "xxxxxx"]],
+    "Switzerland": [["xxxxxx", "xxxxxx"]],
+    "Ukraine": [["xxxxxx", "xxxxxx"]]
+  }
 }

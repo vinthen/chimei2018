@@ -1,93 +1,105 @@
 import PerfectScrollbar from 'perfect-scrollbar';
 
-/* --------------- init World map section --------------- */
-export const initWorldMapSection = (cityData,container) => {
+/* --------------- create World map section --------------- */
+export const createWorldMapSection = (listData,root) => {
 
-    // 世界地圖 section
-    const wrapper = document.createElement('section');
-    wrapper.classList.add('worldmap');
+    /* ----- create world map ----- */
+    const section = document.createElement('section');
+    section.classList.add('worldmap');
 
-    wrapper.innerHTML = 
+    section.innerHTML = 
     `<div id="mapScrollContainer">
-        <div class="map-content"></div>
-        <div class="list-content"></div>
-    </div>`;
-
-    container.appendChild(wrapper);
-
-    // console.log(listData.continent[0]);
-    // console.log(cityData.Europe.country.Czech.city.Prague.description);
-
-    const countryList = document.createElement('section');
-    countryList.classList.add('country-list');
-
-    // countryList.innerHTML = `${_genCountryList(listData,cityData)}`;
+        <div class="map-content">${_createMapPiece(listData)}</div>
+    </div>
     
-    wrapper.appendChild(countryList);
+    <div id="countryList">${_createContinentList(listData)}</div>
+    `;
 
-    _genCountryList(cityData,countryList);
+    root.appendChild(section);
+
+
 
     
 
 
 
-    /* ----- init PerfectScrollbar ----- */
-    // 世界地圖
-    const mapContainer = wrapper.querySelector('#mapScrollContainer');
+    /* ----- init PerfectScrollbar (world map) ----- */
+    const mapContainer = section.querySelector('#mapScrollContainer');
 
     const PS = new PerfectScrollbar(mapContainer, {
         useBothWheelAxes: true,
         suppressScrollY: true
     });   
 
+} // createWorldMapSection
+
+
+/* ---------- 建立地圖上各洲的區塊 ---------- */
+const _createMapPiece = (_listData) => {
+
+    let fragment = '';
+
+    _listData.continent.forEach((item) => {
+
+        const el = 
+        `<div class="map--piece ${item[0]}" data-continent="${item[0]}"></div>`;
+
+        fragment += el;
+
+    });
+
+    // 南美洲例外，手動添加
+    fragment += '<div class="map--piece SouthAmerica" data-continent="southAmerica"></div>';
+
+    return fragment;
 }
 
 
-/* ----- generate country list ----- */
-const _genCountryList = (city,container) => {
+/* ---------- 建立各洲的清單 ---------- */
+const _createContinentList = (_listData) => {
+    
+    let fragment = '';
 
-    for (const continent in city) {       
-        
-        // 各洲的洲名
-        const continentName_en = city[continent].name[0];
-        const continentName_tw = city[continent].name[1];
+    _listData.continent.forEach((item) => {
 
-        // 各洲的內容
-        const entryWpr = document.createElement('div');
-        entryWpr.classList.add('list--continent');
+        const el = 
+        `<div class="list--continent ${item[0]}">
+            <h4><strong>${item[1]}</strong> (${item[0]})</h4>
+            <ul>${_createCountryList(_listData.country,item[0])}</ul>
+        </div>`;
 
-        // entryWpr.innerHTML = 
-        // `<h4><strong>${continentName_tw}</strong> (${continentName_en})</h4>`
+        fragment += el;
 
-        // container.appendChild(entryWpr);
+    });
 
-        let content = ''
+    return fragment;
 
-        for (const country in city[continent].country) {
+} // _createCountryList
 
-            // 國家名
-            const countryName_en = city[continent].country[country].name[0];
-            const countryName_tw = city[continent].country[country].name[1];
+/* ---------- 建立各國家的清單 ---------- */
+const _createCountryList = (countryData,continent) => {
 
-            const item = 
-            `<div class="item" data-country="${countryName_en}">
-                ${countryName_tw} (${countryName_en})
-            </div>`
+    let fragment = '';
 
-            content += item;
-            
-            // console.log(countryName_tw);
+    countryData[continent].forEach((item) => {
 
-        }
+        const el = 
+        `<li class="list--item" data-country="${item[0].replace(/\s+|　+/g, "")}">
+            ${item[1]} (${item[0]})
+        </li>`
 
-        entryWpr.innerHTML = 
-        `<h4><strong>${continentName_tw}</strong> (${continentName_en})</h4>
-        ${content}`
+        fragment += el;
 
-        container.appendChild(entryWpr);
+    });
 
-      }
+    return fragment; 
+
 }
+
+
+
+
+
 
 
 

@@ -1,0 +1,63 @@
+{
+  "Europe": {
+    "name": ["Europe", "歐洲"],
+    "worldmap_order": "1",
+    "country": {
+      "Belgium": {
+        "name": ["Belgium", "比利時"],
+        "city": {
+          "Brussels": {
+            "name": ["Brussels", "布魯塞爾 "],
+            "description": "<p>布魯塞爾的介紹。</p><p>用 p tag 區分段落</p>"
+          }
+        }
+      },
+      "Czech": {
+        "name": ["Czech", "捷克"],
+        "city": {
+          "Prague": {
+            "name": ["Prague", "布拉格"],
+            "description": "<p>布拉格的介紹。</p><p>用 p tag 區分段落</p>"
+          }
+        }
+      },
+      "Italy": {
+        "name": ["Italy", "義大利"],
+        "city": {
+
+        }
+      }
+    }
+  },
+
+  "Africa": {
+    "name": ["Africa", "非洲"],
+    "worldmap_order": "2",
+    "country": {
+      "Egypt": {
+        "name": ["Egypt", "埃及"],
+        "city": {
+          "Brussels": {
+            "name": ["Cairo", "開羅"],
+            "description": "<p>埃及的介紹。</p><p>用 p tag 區分段落</p>"
+          }
+        }
+      }
+    }
+  },
+
+  "Asia": {
+    "name": ["Asia", "亞洲"],
+    "worldmap_order": "3"
+  },
+
+  "Oceania": {
+    "name": ["Oceania", "大洋洲"],
+    "worldmap_order": "4"
+  },
+
+  "America": {
+    "name": ["America", "美洲"],
+    "worldmap_order": "5"
+  }
+}

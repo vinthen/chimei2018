@@ -1,47 +1,38 @@
 {
-  "Europe": {
-    "name": ["Europe", "歐洲"],
-    "country": {
-      "Belgium": {
-        "name": ["Belgium", "比利時"],
-        "city": {
-          "Brussels": {
-            "name": ["Brussels", "布魯塞爾 "],
-            "description": "<p>布魯塞爾 (Brussels) 是比利時的首都。</p><p>十三世紀開始，布魯塞爾逐漸發展成紡織業製造中心。</p>"
-          }
-        }
-      },
-      "Czech": {
-        "name": ["Czech", "捷克"],
-        "city": {
-          "Prague": {
-            "name": ["Prague", "布拉格"],
-            "description": "<p>布拉格 (捷克語：Praha) 是捷克共和國 (Czech Republic) 的首都和最大城市。</p><p>布拉格也是歐洲的文化重鎮之一。</p>"
-          }
-        }
-      },
-      "Italy": {
-        "name": ["Italy", "義大利"],
-        "city": {
-
-        }
-      }
-    }
+  "Brussels": {
+    "name": ["Brussels", "布魯塞爾"],
+    "description": "<p>城市介紹文字。</p><p>用 p tag 區分段落</p>"
   },
 
-  "Africa": {
-    "name": ["Africa", "非洲"]
+  "Prague": {
+    "name": ["Prague", "布拉格"],
+    "description": "<p>城市介紹文字。</p><p>用 p tag 區分段落</p>"
   },
 
-  "Asia": {
-    "name": ["Asia", "亞洲"]
+  "Copenhagen": {
+    "name": ["Copenhagen", "哥本哈根"],
+    "description": "<p>城市介紹文字。</p><p>用 p tag 區分段落</p>"
   },
 
-  "Oceania": {
-    "name": ["Oceania", "大洋洲"]
+  "London": {
+    "name": ["London", "倫敦"],
+    "description": "<p>城市介紹文字。</p><p>用 p tag 區分段落</p>"
   },
 
-  "America": {
-    "name": ["America", "美洲"]
+  "Mirecourt": {
+    "name": ["Mirecourt", "密爾古"],
+    "description": "<p>城市介紹文字。</p><p>用 p tag 區分段落</p>"
+  },
+
+  "Nice": {
+    "name": ["Nice", "尼斯"],
+    "description": "<p>城市介紹文字。</p><p>用 p tag 區分段落</p>"
+  },
+
+  "Paris": {
+    "name": ["Paris", "巴黎"],
+    "description": "<p>城市介紹文字。</p><p>用 p tag 區分段落</p>"
   }
+
+
 }

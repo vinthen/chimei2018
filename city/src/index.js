@@ -2,32 +2,36 @@
 import axios from "axios";
 
 // world map
-import {initWorldMapSection} from "./worldmap";
+import {createWorldMapSection} from "./worldmap";
+
+// city section
+import {createCountrySection} from "./country";
 
 const ROOT = document.getElementById('cityContent');
 
 /* ----- Get data ----- */
-const getListData = () => {
+const getList = () => {
   return axios.get("./city/sample-data/list.json");
 }
 
-const getCityData = () => {
+const getCity = () => {
   return axios.get("./city/sample-data/city.json");
 }
 
 axios.all([
-    getListData(),
-    getCityData()
+    getList(),
+    getCity()
 ]).then(
-  axios.spread(function(list, city) {
+  axios.spread(function(list, city) {   
 
     const LIST = list.data;
     const CITY = city.data;    
-    
-    // console.log(LIST.continent[0]);
-    // console.log(CITY.Europe.country.Czech.city.Prague.description);
 
-    initWorldMapSection(CITY,ROOT);
+    // create World map section
+    createWorldMapSection(LIST,ROOT);
+
+    // create country section
+    createCountrySection(LIST,ROOT);
 
   })
 );
