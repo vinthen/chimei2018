@@ -15,12 +15,7 @@ export const createWorldMapSection = (listData,root) => {
     <div id="countryList">${_createContinentList(listData)}</div>
     `;
 
-    root.appendChild(section);
-
-
-
-    
-
+    root.appendChild(section);   
 
 
     /* ----- init PerfectScrollbar (world map) ----- */
@@ -50,7 +45,7 @@ const _createMapPiece = (_listData) => {
         const el = 
         `<div class="map--piece ${continentName}" 
             data-continent="${continentName}"
-            data-default-country="${defaultCountry}"
+            data-country="${defaultCountry}"
         ></div>`;
 
         fragment += el;

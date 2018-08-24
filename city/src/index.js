@@ -30,14 +30,17 @@ axios.all([
     const LIST = list.data;
     const CITY = city.data;    
 
+    // perfect scroll bar
+    const PS = {};
+
     // create World map section
     createWorldMapSection(LIST,ROOT);
 
     // create country section
-    createCountrySection(LIST,ROOT);
+    createCountrySection(LIST,CITY,ROOT,PS);
 
     // click event listener
-    clickEvent();
+    clickEvent(CITY,PS);
 
   })
 );

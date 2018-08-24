@@ -83,13 +83,28 @@
     "Sweden": [["Stockholm", "斯德哥爾摩"]],
     "Switzerland": [["Zurich", "蘇黎世"]],
     "Ukraine": [["Kiev", "基輔"]],
-    "Egypt": [["xxxxxx", "xxxxxx"]],
-    "China": [["xxxxxx", "xxxxxx"]],
-    "Japan": [["xxxxxx", "xxxxxx"]],
-    "Taiwan": [["xxxxxx", "xxxxxx"]],
-    "Australia": [["xxxxxx", "xxxxxx"]],
-    "Argentina": [["xxxxxx", "xxxxxx"]],
-    "Mexico": [["xxxxxx", "xxxxxx"]],
-    "UnitedStates": [["xxxxxx", "xxxxxx"]]
+    "Egypt": [["Cairo", "開羅"]],
+    "China": [
+      ["Shanghai", "上海"],
+      ["Beijing", "北京", false],
+      ["Guangzhou", "廣州", false]
+    ],
+    "Japan": [
+      ["Tokyo", "東京"],
+      ["Yokohama", "橫濱", false]
+    ],
+    "Taiwan": [
+      ["Tainam", "臺南"],
+      ["Taipei", "臺北", false]
+    ],
+    "Australia": [["Sydney", "雪梨"]],
+    "Argentina": [["Buenos Aires", "布宜諾斯艾利斯"]],
+    "Mexico": [["Mexico", "墨西哥城"]],
+    "UnitedStates": [
+      ["Chicago", "芝加哥"],
+      ["Boston", "波士頓", false],
+      ["New York", "紐約", false],
+      ["Philadelphia", "費城", false]
+    ]
   }
 }
