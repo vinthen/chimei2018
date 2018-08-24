@@ -41,15 +41,24 @@ const _createMapPiece = (_listData) => {
 
     _listData.continent.forEach((item) => {
 
+        // 洲名稱
+        const continentName = item[0];
+        
+        // 預設要開啟的國家
+        const defaultCountry = _listData.country[continentName][0][0];
+
         const el = 
-        `<div class="map--piece ${item[0]}" data-continent="${item[0]}"></div>`;
+        `<div class="map--piece ${continentName}" 
+            data-continent="${continentName}"
+            data-default-country="${defaultCountry}"
+        ></div>`;
 
         fragment += el;
 
     });
 
     // 南美洲例外，手動添加
-    fragment += '<div class="map--piece SouthAmerica" data-continent="southAmerica"></div>';
+    fragment += '<div class="map--piece SouthAmerica" data-continent="southAmerica" data-country="Mexico"></div>';
 
     return fragment;
 }

@@ -7,6 +7,9 @@ import {createWorldMapSection} from "./worldmap";
 // city section
 import {createCountrySection} from "./country";
 
+// event listener
+import {clickEvent} from "./event";
+
 const ROOT = document.getElementById('cityContent');
 
 /* ----- Get data ----- */
@@ -32,6 +35,9 @@ axios.all([
 
     // create country section
     createCountrySection(LIST,ROOT);
+
+    // click event listener
+    clickEvent();
 
   })
 );
